@@ -7,14 +7,14 @@ const Button = ({ children, onClick, type }: PropsWithChildren<Props>) => {
       case ButtonTypesEnum.OUTLINED:
         return "bg-transparent text-foreground-primary border border-accent-default"
       case ButtonTypesEnum.DEFAULT:
-        return "bg-accent-default text-background-primary shadow-3xl"
+        return "bg-accent-default text-background-primary shadow-accent-3xl"
       default:
-        return "bg-accent-default text-background-primary shadow-3xl"
+        return "bg-accent-default text-background-primary shadow-accent-3xl"
     }
   })()
   return (
     <button
-      className={`${buttonTypeClass} font-bold py-2 px-4 rounded`}
+      className={`${buttonTypeClass} font-semibold py-2 px-4 rounded w-fit`}
       onClick={onClick}
     >
       {children}

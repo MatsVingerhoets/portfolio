@@ -7,7 +7,8 @@ export default {
     },
     extend: {
       boxShadow: {
-        "3xl": "0 0px 10px rgba(147,212,177,1)"
+        "accent-3xl": "0 0px 10px rgba(147,212,177,1)",
+        "default-3xl": "4px 4px 15px 0px rgba(0,0,0,1)"
       },
       colors: {
         accent: {
