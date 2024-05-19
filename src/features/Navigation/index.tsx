@@ -1,20 +1,14 @@
 import Logo from "src/assets/Mats_Logo_White.svg?react"
-import Button from "src/components/Button"
-import { ButtonTypesEnum } from "src/components/Button/types"
-import NavLink from "src/components/NavLink"
+import useScreenDetector from "src/hooks/useScreenDetector"
+import DesktopNav from "./DesktopNav"
+import MobileNav from "./MobileNav"
 
 const Navigation = () => {
+  const { isMobile } = useScreenDetector()
   return (
-    <div className="flex justify-between items-center">
-      <Logo className="w-28" />
-      <div className="text-foreground-primary flex">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/portfolio">Portfolio</NavLink>
-        <NavLink to="/contact" underline={false}>
-          <Button type={ButtonTypesEnum.OUTLINED}>Contact</Button>
-        </NavLink>
-      </div>
+    <div className="flex justify-between items-center mb-10">
+      <Logo className="w-24" />
+      {isMobile ? <MobileNav /> : <DesktopNav />}
     </div>
   )
 }

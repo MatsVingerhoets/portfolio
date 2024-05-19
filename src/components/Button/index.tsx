@@ -1,7 +1,12 @@
 import { PropsWithChildren } from "react"
 import { Props, ButtonTypesEnum } from "./types"
 
-const Button = ({ children, onClick, type }: PropsWithChildren<Props>) => {
+const Button = ({
+  children,
+  className,
+  onClick,
+  type
+}: PropsWithChildren<Props>) => {
   const buttonTypeClass = (() => {
     switch (type) {
       case ButtonTypesEnum.OUTLINED:
@@ -14,7 +19,7 @@ const Button = ({ children, onClick, type }: PropsWithChildren<Props>) => {
   })()
   return (
     <button
-      className={`${buttonTypeClass} font-semibold py-2 px-4 rounded w-fit`}
+      className={`${buttonTypeClass} font-semibold rounded w-fit ${className}`}
       onClick={onClick}
     >
       {children}

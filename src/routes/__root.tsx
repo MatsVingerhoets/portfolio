@@ -4,10 +4,10 @@ import Navigation from "src/features/Navigation"
 
 export const Route = createRootRoute({
   component: () => (
-    <>
+    <div className="px-7">
       <Navigation />
       <Outlet />
-      <TanStackRouterDevtools />
-    </>
+      {!import.meta.env.PROD && <TanStackRouterDevtools />}
+    </div>
   )
 })

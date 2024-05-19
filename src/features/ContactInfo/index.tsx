@@ -3,15 +3,18 @@ import Label from "src/components/Label"
 
 const ContactInfo = () => {
   return (
-    <div>
-      <h2 className="font-bold text-center text-foreground-primary mb-5 text-3xl w-100 border-b-2 border-accent-default">
+    <>
+      <h2 className="font-bold mt-8 text-center text-foreground-primary mb-5 text-3xl w-100 border-b-2 border-accent-default">
         Contact
       </h2>
       <div className="flex flex-col gap-6">
         <Label icon="mdi:email">
-          <p className="text-foreground-primary text-base">
+          <a
+            className="text-foreground-primary text-base"
+            href="mailto:mats.vingerhoets5@gmail.com"
+          >
             mats.vingerhoets5@gmail.com
-          </p>
+          </a>
         </Label>
         <Label icon="material-symbols:phone-android">
           <p className="text-foreground-primary text-base">+32 4 75 29 70 09</p>
@@ -33,7 +36,7 @@ const ContactInfo = () => {
           </Link>
         </Label>
       </div>
-    </div>
+    </>
   )
 }
 

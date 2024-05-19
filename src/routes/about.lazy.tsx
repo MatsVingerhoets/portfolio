@@ -5,5 +5,6 @@ export const Route = createLazyFileRoute("/about")({
 })
 
 function About() {
+  console.log(import.meta.env.PROD)
   return <div className="p-2">Hello from About!</div>
 }
