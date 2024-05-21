@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react/dist/iconify.js"
 import { useClickAway } from "react-use"
 import { useRef } from "react"
 import { useState } from "react"
@@ -23,9 +24,14 @@ const MobileNav = () => {
             transition={{ duration: 0.2 }}
             className="fixed left-0 shadow-4xl right-0 top-0 p-5 pt-0 bg-neutral-950 border-b border-b-white/20"
           >
-            <h1 className="text-white text-end" onClick={() => setOpen(false)}>
-              x
-            </h1>
+            <div className="flex justify-end w-full">
+              <Icon
+                role="button"
+                onClick={() => setOpen(false)}
+                className="mt-5 mb-3 text-3xl text-white text-end"
+                icon="icomoon-free:cross"
+              />
+            </div>
             <ul className="grid gap-2">
               {routes.map(({ title, to }, idx) => {
                 return (
