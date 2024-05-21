@@ -6,8 +6,8 @@ import MobileNav from "./MobileNav"
 const Navigation = () => {
   const { isMobile } = useScreenDetector()
   return (
-    <div className="flex justify-between items-center mb-10">
-      <Logo className="w-24" />
+    <div className="flex justify-between items-center mb-8 md:mb-10">
+      <Logo className="w-20 md:w-24" />
       {isMobile ? <MobileNav /> : <DesktopNav />}
     </div>
   )

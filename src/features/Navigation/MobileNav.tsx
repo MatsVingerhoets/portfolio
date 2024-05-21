@@ -13,7 +13,7 @@ const MobileNav = () => {
 
   return (
     <div ref={ref} className="lg:hidden ">
-      <Hamburger color="#93D4B1" toggled={isOpen} size={28} toggle={setOpen} />
+      <Hamburger color="#93D4B1" toggled={isOpen} size={42} toggle={setOpen} />
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -21,8 +21,11 @@ const MobileNav = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed left-0 shadow-4xl right-0 top-[3.5rem] p-5 pt-0 bg-neutral-950 border-b border-b-white/20"
+            className="fixed left-0 shadow-4xl right-0 top-0 p-5 pt-0 bg-neutral-950 border-b border-b-white/20"
           >
+            <h1 className="text-white text-end" onClick={() => setOpen(false)}>
+              x
+            </h1>
             <ul className="grid gap-2">
               {routes.map(({ title, to }, idx) => {
                 return (
@@ -41,7 +44,7 @@ const MobileNav = () => {
                     <a
                       onClick={() => setOpen(prev => !prev)}
                       className={
-                        "flex items-center justify-between w-full p-5 rounded-xl bg-neutral-950"
+                        "flex items-center justify-between w-full p-5 rounded-xl bg-neutral-950 text-white"
                       }
                       href={to}
                     >
