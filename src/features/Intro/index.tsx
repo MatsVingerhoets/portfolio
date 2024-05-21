@@ -12,13 +12,13 @@ const Intro = () => {
         <h1 className="font-bold text-foreground-primary mt-0">
           Hello, I am Mats Vingerhoets!
         </h1>
-        <p className="text-foreground-primary">
+        <p className={`text-foreground-primary`}>
           I’m a full stack developer with over 5 years of experience in the
           field. My passion for coding grows everyday and I’m always on the look
           for new challenges!
         </p>
         <Button
-          className="text-xl mt-auto flex gap-2 items-center py-4 px-14"
+          className="lg:mt-auto mt-6 px-14 lg:py-4 py-3 text-center w-full md:w-fit text-xl flex gap-2 items-center justify-center"
           type={ButtonTypesEnum.DEFAULT}
         >
           Let's talk!
